@@ -1,68 +1,43 @@
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+#//
+#//  ViewController.swift
+#//  PrimeiroApp
+#//
+#//  Created by COTEMIG on 18/02/19.
+#//  Copyright © 2019 COTEMIG. All rights reserved.
+#//
 
-## Build generated
-build/
-DerivedData/
+import UIKit
+#class the view controller
+class ViewController: UIViewController {
+    
+#Links in the elements is view controller   
+    @IBOutlet weak var txtn1: UITextField!
+    
+    @IBOutlet weak var lblresultado: UILabel!
+    
+    @IBAction func btncalcular(_ sender: UIButton) {
+  #declarations variables this calculator      
+        let n1 = Double(txtn1.text!)
+        let n2 = Double(2.0)
+        var total : Double = 0
+  #calculing       
+        total = n1! * n2
+   #showing result     
+        lblresultado.text = String(total)
+    }
+    
 
-## Various settings
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata/
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
 
-## Other
-*.moved-aside
-*.xccheckout
-*.xcscmblueprint
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
-## Obj-C/Swift specific
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+}
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
